@@ -12,8 +12,14 @@
   color: rgb(50, 47, 47);
 }
 
-.text-events-container{
+.hero{
+ text-align: left;
+ padding: 30px;
+}
+
+.feed-container{
   columns: 3;
-text-align: center
+text-align: center;
+padding: 30px;
 
 }
