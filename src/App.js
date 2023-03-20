@@ -1,33 +1,30 @@
 import "./App.css";
 import { NostrProvider } from "nostr-react";
-import { GlobalFeed } from './components/TextEvents/TextEvents';
+// import { GlobalFeed } from "./components/TextEvents/TextEvents";
+import Navbar from "./components/Navbar/Navbar";
+import LongformContent from "./components/LongformContent/LongformContent";
 // import SpecificUserEvents from './components/SpecificUserEvents/SpecificUserEvents';
 const relayUrls = [
   // "wss://nostr-pub.wellorder.net",
   // "wss://relay.nostr.ch",
   // "wss://relay.damus.io",
-  "wss://relay.nostr.band/trusted"
-
-
+  "wss://relay.nostr.band/trusted",
 ];
 
 function App() {
   return (
     <NostrProvider relayUrls={relayUrls} debug={true}>
+      <div className="App">
+        <Navbar/>
+        <header>
 
-    <div className="App">
-      <header >
-       <div className="hero">
-        <h1> Nostrami</h1>
-        </div>
-        <div className="feed-container">
-        {/* <SpecificUserEvents/> */}
-        <GlobalFeed/>
-        </div>
-      </header>
-  
-    </div>
-
+          <div className="feed-container">
+            {/* <SpecificUserEvents/> */}
+            {/* <GlobalFeed /> */}
+            <LongformContent/>
+          </div>
+        </header>
+      </div>
     </NostrProvider>
   );
 }
