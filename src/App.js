@@ -1,7 +1,8 @@
 import "./App.css";
 import { NostrProvider } from "nostr-react";
-import { GlobalFeed } from "./components/TextEvents/TextEvents";
+// import { GlobalFeed } from "./components/TextEvents/TextEvents";
 import Navbar from "./components/Navbar/Navbar";
+import LongformContent from "./components/LongformContent/LongformContent";
 // import SpecificUserEvents from './components/SpecificUserEvents/SpecificUserEvents';
 const relayUrls = [
   // "wss://nostr-pub.wellorder.net",
@@ -19,7 +20,8 @@ function App() {
 
           <div className="feed-container">
             {/* <SpecificUserEvents/> */}
-            <GlobalFeed />
+            {/* <GlobalFeed /> */}
+            <LongformContent/>
           </div>
         </header>
       </div>

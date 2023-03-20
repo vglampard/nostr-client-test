@@ -11,7 +11,7 @@ export const GlobalFeed = () => {
       kinds: [1],
     },
   });
-  console.log(events);
+  // console.log(events);
   return (
     <>
       <div className="text-events-container">
