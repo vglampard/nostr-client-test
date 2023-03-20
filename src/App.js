@@ -1,6 +1,6 @@
 import './App.css';
 import { NostrProvider } from "nostr-react";
-import { GlobalFeed } from './components/TextEvents/TextEvents';
+// import { GlobalFeed } from './components/TextEvents/TextEvents';
 import SpecificUserEvents from './components/SpecificUserEvents/SpecificUserEvents';
 const relayUrls = [
   "wss://nostr-pub.wellorder.net",
@@ -14,7 +14,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p> nostr</p>
-        <GlobalFeed/>
+        {/* <SpecificUserEvents/> */}
+        {/* <GlobalFeed/> */}
       </header>
    
     </div>
