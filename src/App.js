@@ -3,9 +3,9 @@ import { NostrProvider } from "nostr-react";
 // import { GlobalFeed } from './components/TextEvents/TextEvents';
 import SpecificUserEvents from './components/SpecificUserEvents/SpecificUserEvents';
 const relayUrls = [
-  "wss://nostr-pub.wellorder.net",
-  "wss://relay.nostr.ch",
-  "wss://relay.damus.io"
+  // "wss://nostr-pub.wellorder.net",
+  // "wss://relay.nostr.ch",
+  "wss://relay.damus.io",
 ];
 
 function App() {
