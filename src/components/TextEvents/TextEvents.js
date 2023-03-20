@@ -8,16 +8,16 @@ export const GlobalFeed = () => {
   const { events } = useNostrEvents({
     filter: {
       since: dateToUnix(now.current), // all new events from now
-      kinds: [1],
+      kinds: [33],
     },
   });
-console.log(events)
+  console.log(events);
   return (
     <>
-    <div className = "text-events-container">
-      {events.map((event) => (
-        <EventCard key={event.id} content = {event.content}/>
-      ))}
+      <div className="text-events-container">
+        {events.map((event) => (
+          <EventCard key={event.id} content={event.content} />
+        ))}
       </div>
     </>
   );
