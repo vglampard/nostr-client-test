@@ -8,7 +8,7 @@ export const GlobalFeed = () => {
   const { events } = useNostrEvents({
     filter: {
       since: dateToUnix(now.current), // all new events from now
-      kinds: [33],
+      kinds: [1],
     },
   });
   console.log(events);
