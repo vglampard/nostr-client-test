@@ -1,8 +1,9 @@
-import React from 'react'
+import React from "react";
 import { useNostrEvents } from "nostr-react";
-import EventCard from '../EventCard/EventCard';
+// import EventCard from '../EventCard/EventCard';
 
 export default function SpecificUserEvents() {
+
     const { events } = useNostrEvents({
         filter: {
         //   authors: [
@@ -21,3 +22,4 @@ export default function SpecificUserEvents() {
         </>
       );
     };
+
