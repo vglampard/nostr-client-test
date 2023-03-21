@@ -22,7 +22,7 @@ export default function LongformModal({event}) {
           >
             <div className="relative grid justify-items-center my-6 mx-auto max-w-3xl align">
               {/*content*/}
-              <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-[90%] bg-white outline-none focus:outline-none ">
+              <div className="border-0 rounded-lg shadow-lg relative flex flex-col  bg-white outline-none focus:outline-none w-[90%]">
                 {/*header*/}
                 <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
                   <h3 className="text-3xl font-semibold">
@@ -39,7 +39,7 @@ export default function LongformModal({event}) {
                 </div>
                 {/*body*/}
                 <div className="relative p-6 flex-auto">
-                  <p className="my-4 text-slate-500 text-sm leading-relaxed break-words">
+                  <p className="my-4 text-slate-500 text-sm leading-relaxed break-words w-[95%]">
                     <ReactMarkdown>{event.content}</ReactMarkdown>
                   </p>
                 </div>
