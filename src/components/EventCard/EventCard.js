@@ -26,8 +26,6 @@ export default function EventCard({ event }) {
 let date = dateFromUnix(event.created_at)
 let tags = getTags(event.tags);
 
-console.log("TAGS:", tags)
-
   return (
     <div className="bg-orange-50 rounded-s drop-shadow max-w-[90%] p-3 text-xs">
       <h1 className="font-bold text-lg">{title}</h1>
@@ -40,6 +38,7 @@ console.log("TAGS:", tags)
 return <p>#{tag[1]}</p>
 })}
 </div>
+<p className="break-words">Author - {event.pubkey}</p>
     </div>
   );
 }
