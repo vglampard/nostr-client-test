@@ -16,7 +16,7 @@ export default function LongformContent() {
  
     console.log("LF EVENTS:", events)
       return (
-        <div className="grid grid-cols-3 gap-4 md:grid-cols-2 sm:grid-cols-1 p-3">
+        <div className="grid lg:grid-cols-3 gap-4 md:grid-cols-2 sm:cols-1 p-3">
           {events.map((event) => (
             <EventCard event={event}/>
           ))}
