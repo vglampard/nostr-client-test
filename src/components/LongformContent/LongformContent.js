@@ -9,18 +9,18 @@ export default function LongformContent() {
 
     const { events } = useNostrEvents({
         filter: {
-          since: dateToUnix(now.current)-10000,
+          since: dateToUnix(now.current)-1000,
           kinds: [30023],
         },
       });
  
     console.log("LF EVENTS:", events)
       return (
-        <>
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-3 p-3">
           {events.map((event) => (
             <EventCard event={event}/>
           ))}
-        </>
+        </div>
       );
     };
 

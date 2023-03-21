@@ -12,18 +12,11 @@
   color: rgb(50, 47, 47);
 }
 
-
 .hero{
  text-align: left;
  padding: 30px;
 }
 
-.feed-container{
-  columns: 3;
-text-align: center;
-padding: 30px;
-
-}
 
 @tailwind base;
 @tailwind components;
