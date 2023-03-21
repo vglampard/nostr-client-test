@@ -15,11 +15,19 @@ function dateFromUnix(unix){
   return new Date(unix*1000).toLocaleString();
 }
 
+function getTags(tags){
+return tags.filter((tag)=>tag[0]==="t")
+}
+
 export default function EventCard({ event }) {
   let substring = event.content.substring(0, 350) + "...";
   let img = getImage(event.tags);
   let title = getByTitle(event.tags)[0][1]
 let date = dateFromUnix(event.created_at)
+let tags = getTags(event.tags);
+
+console.log("TAGS:", tags)
+
   return (
     <div className="bg-orange-50 rounded-s drop-shadow max-w-[90%] p-3 text-xs">
       <h1 className="font-bold text-lg">{title}</h1>
@@ -27,7 +35,11 @@ let date = dateFromUnix(event.created_at)
       <ReactMarkdown className ="flex flex-wrap break-all">{substring}</ReactMarkdown>
       {img.length !== 0 && <img src={img[0][1]} alt={event.tags[0][1]} className="w-[95%]  rounded-md text-center m-2" />}
       <LongformModal event={event} className="w-100"/>
-     
+      <div className="flex gap-1">
+     {tags.map((tag)=>{
+return <p>#{tag[1]}</p>
+})}
+</div>
     </div>
   );
 }

@@ -8,11 +8,11 @@ export default function LongformModal({event}) {
     <>
     <div className= "grid justify-items-end">
       <button
-        className="bg-orange-200 text-white active:bg-slate-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 align-right"
+        className="bg-orange-200 text-white active:bg-slate-600 font-bold uppercase text-sm  py-2 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 align-right w-10"
         type="button"
         onClick={() => setShowModal(true)}
       >
-        Read more
+        +
       </button>
       </div>
       {showModal ? (
