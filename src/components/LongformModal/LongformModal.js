@@ -1,5 +1,7 @@
 import React from "react";
 //https://www.creative-tim.com/learning-lab/tailwind-starter-kit/documentation/react/modals/regular
+import ReactMarkdown from 'react-markdown'
+
 export default function LongformModal({event}) {
   const [showModal, setShowModal] = React.useState(false);
   return (
@@ -36,11 +38,11 @@ export default function LongformModal({event}) {
                 {/*body*/}
                 <div className="relative p-6 flex-auto">
                   <p className="my-4 text-slate-500 text-lg leading-relaxed">
-                    {event.content}
+                    <ReactMarkdown>{event.content}</ReactMarkdown>
                   </p>
                 </div>
                 {/*footer*/}
-                {event.tags[5] && <img src={event.tags[5][1]} alt={event.tags[0][1]}/>}
+            
                 <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
                   <button
                     className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
