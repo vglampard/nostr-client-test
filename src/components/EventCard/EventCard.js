@@ -20,7 +20,7 @@ export default function EventCard({ event }) {
     <div className="bg-yellow-50 rounded-s drop-shadow max-w-[100%] p-3">
       <h1 className="font-bold text-lg">{title}</h1>
       <ReactMarkdown className ="flex flex-wrap break-all">{substring}</ReactMarkdown>
-      <LongformModal event={event} className="mw-75"/>
+      <LongformModal event={event} className="w-100"/>
       {img.length !== 0 && <img src={img[0][1]} alt={event.tags[0][1]} className="max-w-[95%] rounded-md text-center m-2" />}
     </div>
   );
