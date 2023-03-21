@@ -18,7 +18,7 @@ function App() {
         <Navbar/>
         <header>
 
-          <div className="feed-container">
+          <div >
             {/* <SpecificUserEvents/> */}
             {/* <GlobalFeed /> */}
             <LongformContent/>

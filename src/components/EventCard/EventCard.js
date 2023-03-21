@@ -1,15 +1,27 @@
-import React from 'react'
-import LongformModal from '../LongformModal/LongformModal'
+import React from "react";
+import LongformModal from "../LongformModal/LongformModal";
+import ReactMarkdown from 'react-markdown'
 
-import "./textCard.css"
-export default function EventCard({event}) {
-  let substring = event.content.substring(0,240)+"..."
-  console.log("SUBSTRING:", substring)
+function getImage(event) {
+  let img = event.filter((tag) => tag[0] === "image");
+  return img;
+}
+function getByTitle(event){
+  let title = event.filter((tag) => tag[0] === "title");
+  return title;
+}
+
+export default function EventCard({ event }) {
+  let substring = event.content.substring(0, 350) + "...";
+  let img = getImage(event.tags);
+  let title = getByTitle(event.tags)[0][1]
+
   return (
-    <div className="textCard">
-        <p>{substring}</p>
-        <LongformModal event={event}/>
-        {event.tags[5] && <img src={event.tags[5][1]} alt={event.tags[0][1]}/>}
+    <div className="bg-yellow-50 rounded-s drop-shadow max-w-[100%] p-3">
+      <h1 className="font-bold text-lg">{title}</h1>
+      <ReactMarkdown className ="flex flex-wrap break-all">{substring}</ReactMarkdown>
+      <LongformModal event={event} className="w-100"/>
+      {img.length !== 0 && <img src={img[0][1]} alt={event.tags[0][1]} className="max-w-[95%] rounded-md text-center m-2" />}
     </div>
-  )
+  );
 }

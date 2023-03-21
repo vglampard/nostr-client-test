@@ -1,70 +1,23 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Nostr Client 
 
-## Available Scripts
+I'm playing around with Nostr's decentralised social media protocol. 
 
-In the project directory, you can run:
+![Nostr logo](/src/nostr.jpeg)
 
-### `npm start`
+It's **"a simple, open protocol that enables a truly censorship-resistant and global social network"**, with multiple relays that users can subscribe to with a simple public/private key combination in lieu of other more personal (read: identifying) credentials. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+It launched late last year, although has been in development for significantly longer, and is already rallying a hugely dynamic ecosystem.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+So I'm building out a simple client to play around with the different relays and event types - for the moment, it's just subscribing to long-form text events. And I'll just be tooling around to see how I can link up simple funcitonalities like corralling all comments under the correct posts, and getting a slick design in place.
 
-### `npm test`
+See the live and VERY early MVP [here](https://nostrami.netlify.app/) - I've throttled the content coming through to calm down the feed a little, and am currently subscribed only to the relatively spam-free relay.nostr.band/trusted whilst I'm testing out things like filters and features. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Next Steps
 
-### `npm run build`
+I'm going to play around building out features like: 
+- searching for content from specific users, 
+- Posting content to the relay,
+- encrypted messaging. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+🚀🚀🚀
