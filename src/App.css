@@ -2,20 +2,6 @@
   text-align: center;
 }
 
-.App-header {
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: 11px;
-  color: rgb(50, 47, 47);
-}
-
-.hero{
- text-align: left;
- padding: 30px;
-}
 
 
 @tailwind base;
