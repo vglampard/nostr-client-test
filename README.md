@@ -3,7 +3,7 @@
 
 I'm playing around with Nostr's decentralised social media protocol. 
 
-![Nostr logo](/src/nostr.jpeg)
+![Nostr logo](/src/nostr.jpg)
 
 It's **"a simple, open protocol that enables a truly censorship-resistant and global social network"**, with multiple relays that users can subscribe to with a simple public/private key combination in lieu of other more personal (read: identifying) credentials. 
 
