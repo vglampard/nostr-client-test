@@ -4,12 +4,12 @@ export default function Navbar() {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   return (
     <>
-      <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-white outline outline-2 mb-3 ">
+      <nav className="fixed flex flex-wrap items-center justify-between px-2 py-3 bg-white outline outline-2 mb-3 w-[100%]">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <a
               className="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-slate-700"
-              href="#pablo"
+              href="https://nostrami.netlify.app/"
             >
               NOSTRAMI
             </a>
@@ -32,17 +32,21 @@ export default function Navbar() {
               <li className="nav-item">
                 <a
                   className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-slate-700 hover:opacity-75"
-                  href="#pablo"
+                  href="https://nostr.watch/relays/find#favorite"
+                  target="_blank"
+                  rel="noreferrer"
                 >
-                  <i className="fab fa-facebook-square text-lg leading-lg text-slate-700 opacity-75"></i><span className="ml-2">Share</span>
+                  <i className="fab fa-facebook-square text-lg leading-lg text-slate-700 opacity-75"></i><span className="ml-2">Test client pulling 30023 events (long form content) from relay.nostr.band/trusted. </span>
                 </a>
               </li>
               <li className="nav-item">
                 <a
                   className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-slate-700 hover:opacity-75"
-                  href="#pablo"
+                  href="https://github.com/vglampard"
+                  target="_blank"
+                  rel="noreferrer"
                 >
-                  <i className="fab fa-twitter text-lg leading-lg text-slate-700 opacity-75"></i><span className="ml-2">Tweet</span>
+                  <i className="fab fa-twitter text-lg leading-lg text-slate-700 opacity-75"></i><span className="ml-2">More on the way</span>
                 </a>
               </li>
               <li className="nav-item">
