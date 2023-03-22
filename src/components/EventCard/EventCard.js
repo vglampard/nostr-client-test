@@ -4,6 +4,7 @@ import ReactMarkdown from 'react-markdown'
 
 function getImage(event) {
   let img = event.filter((tag) => tag[0] === "image");
+  console.log("IMG:", img)
   return img;
 }
 function getByTitle(event){
@@ -27,7 +28,7 @@ let date = dateFromUnix(event.created_at)
 let tags = getTags(event.tags);
 
   return (
-    <div className="bg-orange-50 rounded-s drop-shadow max-w-[95vw] p-3 text-xs">
+    <div className="bg-slate-100 rounded-s drop-shadow max-w-[95vw] p-3 text-xs">
       <h1 className="font-bold text-lg">{title}</h1>
       <p>{date}</p>
       <ReactMarkdown className ="flex flex-wrap break-all">{substring}</ReactMarkdown>

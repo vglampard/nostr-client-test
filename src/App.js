@@ -15,15 +15,14 @@ function App() {
   return (
     <NostrProvider relayUrls={relayUrls} debug={true}>
       <div className="App">
-        <Navbar/>
-        <header>
-
-          <div >
-            {/* <SpecificUserEvents/> */}
-            {/* <GlobalFeed /> */}
-            <LongformContent/>
-          </div>
+        <header className="sticky top-0 z-50">
+          <Navbar className="" />
         </header>
+        <div className="pt-[100px] relative">
+          {/* <SpecificUserEvents/> */}
+          {/* <GlobalFeed /> */}
+          <LongformContent />
+        </div>
       </div>
     </NostrProvider>
   );

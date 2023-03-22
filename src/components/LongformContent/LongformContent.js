@@ -9,8 +9,9 @@ export default function LongformContent() {
 
     const { events } = useNostrEvents({
         filter: {
-          since: dateToUnix(now.current)-500000,
+          since: dateToUnix(now.current)-100000,
           kinds: [30023],
+          authors:["8f69ac99b96f7c4ad58b98cc38fe5d35ce02daefae7d1609c797ce3b4f92f5fd"]
         },
       });
  
