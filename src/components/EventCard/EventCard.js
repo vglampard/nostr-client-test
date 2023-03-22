@@ -1,6 +1,7 @@
 import React from "react";
 import LongformModal from "../LongformModal/LongformModal";
 import ReactMarkdown from "react-markdown";
+import userIcon from "./user.png"
 
 function getImage(event) {
   let img = event.filter((tag) => tag[0] === "image");
@@ -30,7 +31,7 @@ export default function EventCard({ event }) {
     <div className="bg-slate-100 rounded-s drop-shadow max-w-[95vw] p-3 text-xs flex flex-col">
       <h1 className="font-bold text-base">{title}</h1>
       <p>{date}</p>
-      <ReactMarkdown className="flex flex-wrap break-all text-xs">
+      <ReactMarkdown className="flex flex-wrap break-all text-xs p-2">
         {substring}
       </ReactMarkdown>
       {img.length !== 0 && (
@@ -40,13 +41,17 @@ export default function EventCard({ event }) {
           className="rounded text-center m-2 max-w-[1oovw]"
         />
       )}
-      <LongformModal textEvent={event} title={title} />
+      
       <div className="flex gap-1">
         {tags.map((tag) => {
           return <p className="bg-orange-50 rounded-lg ">#{tag[1]}</p>;
         })}
       </div>
-      <p className="break-words">Author - {event.pubkey}</p>
+      <div className="flex break-words w-[100%] items-center p-2">
+        <img src={userIcon} alt="user icon" className="w-4 h-4"/>
+      <p className="break-words w-[100%]">{event.pubkey}</p>
+      </div>
+      <LongformModal textEvent={event} title={title} />
     </div>
   );
 }
