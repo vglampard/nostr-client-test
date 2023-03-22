@@ -3,7 +3,6 @@ import { NostrProvider } from "nostr-react";
 // import { GlobalFeed } from "./components/TextEvents/TextEvents";
 import Navbar from "./components/Navbar/Navbar";
 import LongformContent from "./components/LongformContent/LongformContent";
-import bgImg from "./bg.jpg"
 // import SpecificUserEvents from './components/SpecificUserEvents/SpecificUserEvents';
 const relayUrls = [
   // "wss://nostr-pub.wellorder.net",
