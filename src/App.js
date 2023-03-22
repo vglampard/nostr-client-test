@@ -3,7 +3,7 @@ import { NostrProvider } from "nostr-react";
 // import { GlobalFeed } from "./components/TextEvents/TextEvents";
 import Navbar from "./components/Navbar/Navbar";
 import LongformContent from "./components/LongformContent/LongformContent";
-
+import bgImg from "./bg.jpg"
 // import SpecificUserEvents from './components/SpecificUserEvents/SpecificUserEvents';
 const relayUrls = [
   // "wss://nostr-pub.wellorder.net",
@@ -16,11 +16,11 @@ const relayUrls = [
 function App() {
   return (
     <NostrProvider relayUrls={relayUrls} debug={true}>
-      <div className="bg-zinc-100">
+      <div className="bg-zinc-200">
         <header className="sticky top-0 z-50">
           <Navbar className="" />
         </header>
-        <div className="pt-[100px] lg:px-[200px] ">
+        <div className="pt-[100px] lg:px-[200px] bg-[url('./bg.jpg')]">
           {/* <SpecificUserEvents/> */}
           {/* <GlobalFeed /> */}
           <LongformContent />
