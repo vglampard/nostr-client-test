@@ -16,7 +16,7 @@ const relayUrls = [
 function App() {
   return (
     <NostrProvider relayUrls={relayUrls} debug={true}>
-      <div className="bg-blue-200">
+      <div className="bg-zinc-200">
         <header className="sticky top-0 z-50">
           <Navbar className="" />
         </header>
