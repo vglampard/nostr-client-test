@@ -32,17 +32,21 @@ export default function Navbar() {
               <li className="nav-item">
                 <a
                   className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-slate-700 hover:opacity-75"
-                  href="#pablo"
+                  href="https://nostr.watch/relays/find#favorite"
+                  target="_blank"
+                  rel="noreferrer"
                 >
-                  <i className="fab fa-facebook-square text-lg leading-lg text-slate-700 opacity-75"></i><span className="ml-2">Share</span>
+                  <i className="fab fa-facebook-square text-lg leading-lg text-slate-700 opacity-75"></i><span className="ml-2">Test client pulling 30023 events (long form content) from relay.nostr.band/trusted. </span>
                 </a>
               </li>
               <li className="nav-item">
                 <a
                   className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-slate-700 hover:opacity-75"
-                  href="#pablo"
+                  href="https://github.com/vglampard"
+                  target="_blank"
+                  rel="noreferrer"
                 >
-                  <i className="fab fa-twitter text-lg leading-lg text-slate-700 opacity-75"></i><span className="ml-2">Tweet</span>
+                  <i className="fab fa-twitter text-lg leading-lg text-slate-700 opacity-75"></i><span className="ml-2">More on the way</span>
                 </a>
               </li>
               <li className="nav-item">

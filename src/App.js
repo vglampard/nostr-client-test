@@ -9,6 +9,7 @@ const relayUrls = [
   // "wss://nostr-pub.wellorder.net",
   // "wss://relay.nostr.ch",
   // "wss://relay.damus.io",
+  // "	relay.nostr.scot",
   "wss://relay.nostr.band/trusted",
 ];
 
