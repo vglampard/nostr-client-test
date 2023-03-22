@@ -5,8 +5,8 @@ export default function Translate() {
   return (
     <div className="flex space-x-4">
       <p className="flex-auto">
-        First 5,000 characters copied to clipboard! Click here to go to
-        to DeepL and paste into the translator.{" "}
+        First 5,000 characters copied to clipboard! Click here to go to to DeepL
+        and paste into the translator.{" "}
       </p>
       <a
         href="https://www.deepl.com/translator"

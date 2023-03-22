@@ -18,15 +18,12 @@ function App() {
       <div className="App">
         <header className="sticky top-0 z-50">
           <Navbar className="" />
-         
         </header>
-        <div className="pt-[100px] relative">
-        
+        <div className="pt-[100px] lg:px-[200px] ">
           {/* <SpecificUserEvents/> */}
           {/* <GlobalFeed /> */}
           <LongformContent />
         </div>
-       
       </div>
     </NostrProvider>
   );
