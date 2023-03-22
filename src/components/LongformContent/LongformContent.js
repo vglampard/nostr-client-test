@@ -9,7 +9,7 @@ export default function LongformContent() {
 
   const { events } = useNostrEvents({
     filter: {
-      since: dateToUnix(now.current) - 100000,
+      since: dateToUnix(now.current) - 300000,
       kinds: [30023],
     },
   });
