@@ -23,6 +23,7 @@ function App() {
           {/* <GlobalFeed /> */}
           <LongformContent />
         </div>
+       
       </div>
     </NostrProvider>
   );

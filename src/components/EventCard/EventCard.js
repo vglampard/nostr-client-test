@@ -4,7 +4,6 @@ import ReactMarkdown from 'react-markdown'
 
 function getImage(event) {
   let img = event.filter((tag) => tag[0] === "image");
-  console.log("IMG:", img)
   return img;
 }
 function getByTitle(event){
@@ -33,7 +32,7 @@ let tags = getTags(event.tags);
       <p>{date}</p>
       <ReactMarkdown className ="flex flex-wrap break-all">{substring}</ReactMarkdown>
       {img.length !== 0 && <img src={img[0][1]} alt={event.tags[0][1]} className="w-[95%]  rounded-md text-center m-2" />}
-      <LongformModal event={event} />
+      <LongformModal textEvent={event} />
       <div className="flex gap-1">
      {tags.map((tag)=>{
 return <p>#{tag[1]}</p>
