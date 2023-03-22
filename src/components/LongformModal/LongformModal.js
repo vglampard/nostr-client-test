@@ -1,19 +1,19 @@
 import React from "react";
 //https://www.creative-tim.com/learning-lab/tailwind-starter-kit/documentation/react/modals/regular
 import ReactMarkdown from 'react-markdown'
-import { toast } from "react-toastify";
-import Translate from "../Translate/Translate";
+// import { toast } from "react-toastify";
+// import Translate from "../Translate/Translate";
 import translateIcon from "./translate.png"
 
 export default function LongformModal({textEvent}) {
   const [showModal, setShowModal] = React.useState(false);
-  const output = () => toast(<Translate/>); console.log("TOAST");
+  // const output = () => toast(<Translate/>); console.log("TOAST");
 
   function handleTranslationClick(){
     let limitedText=textEvent.content.substring(0,4999);
     navigator.clipboard.writeText(limitedText);
     alert("Limited feature: first 5,000 characters copied to clipboard, jump over to DeepL to get best translation => https://www.deepl.com/translator.")
-    output();
+    // output();
   }
 
   return (
@@ -32,9 +32,9 @@ export default function LongformModal({textEvent}) {
           <div
             className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
           >
-            <div className="relative grid justify-items-center my-6 mx-auto max-w-3xl align">
+            <div className="absolute grid justify-items-center my-6 mx-auto h-[90%] z-80 align">
               {/*content*/}
-              <div className="border-0 rounded-lg shadow-lg relative flex flex-col  bg-white outline-none focus:outline-none w-[90%]">
+              <div className="border-0 rounded-lg shadow-lg flex flex-col  bg-white outline-none focus:outline-none w-[90%]">
                 {/*header*/}
                 <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
                   <h3 className="text-3xl font-semibold">
@@ -50,7 +50,7 @@ export default function LongformModal({textEvent}) {
                   </button>
                 </div>
                 {/*body*/}
-                <div className="relative top-0 z-80 p-6 flex-auto">
+                <div className=" top-0 z-80 p-6 flex-auto">
                   <p className="my-4 text-slate-500 text-sm leading-relaxed break-words w-[95%]">
                     <ReactMarkdown>{textEvent.content}</ReactMarkdown>
                   </p>
