@@ -3,6 +3,7 @@ import React from "react";
 import ReactMarkdown from 'react-markdown'
 import { toast } from "react-toastify";
 import Translate from "../Translate/Translate";
+import translateIcon from "./translate.png"
 
 export default function LongformModal({textEvent}) {
   const [showModal, setShowModal] = React.useState(false);
@@ -11,8 +12,7 @@ export default function LongformModal({textEvent}) {
   function handleTranslationClick(){
     let limitedText=textEvent.content.substring(0,4999);
     navigator.clipboard.writeText(limitedText);
-    console.log("copied");
-
+    alert("Limited feature: first 5,000 characters copied to clipboard, jump over to DeepL to get best translation => https://www.deepl.com/translator.")
     output();
   }
 
@@ -59,14 +59,15 @@ export default function LongformModal({textEvent}) {
             
                 <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
                   
-                  <button onClick = {(textEvent)=>handleTranslationClick(textEvent)} className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">Get translation</button>
+                 
                   <button
-                    className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
                     onClick={() => setShowModal(false)}
                   >
-                    Close
+                    CLOSE
                   </button>
+                  <img src={translateIcon} onClick = {(textEvent)=>handleTranslationClick(textEvent)} alt="translation button" className="h-5"/>
                   {/* <button
                     className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
