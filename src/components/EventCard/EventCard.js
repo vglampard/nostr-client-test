@@ -20,7 +20,7 @@ function getTags(tags) {
 }
 
 export default function EventCard({ event }) {
-  let substring = event.content.substring(0, 350) + "...";
+  let substring = event.content.substring(0, 500) + "...";
   let img = getImage(event.tags);
   let title = getByTitle(event.tags)[0][1];
   let date = dateFromUnix(event.created_at);
@@ -28,22 +28,22 @@ export default function EventCard({ event }) {
 
   return (
     <div className="bg-slate-100 rounded-s drop-shadow max-w-[95vw] p-3 text-xs flex flex-col">
-      <h1 className="font-bold text-lg">{title}</h1>
+      <h1 className="font-bold text-base">{title}</h1>
       <p>{date}</p>
-      <ReactMarkdown className="flex flex-wrap break-all">
+      <ReactMarkdown className="flex flex-wrap break-all text-xs">
         {substring}
       </ReactMarkdown>
       {img.length !== 0 && (
         <img
           src={img[0][1]}
           alt={event.tags[0][1]}
-          className="rounded-md text-center m-2"
+          className="rounded text-center m-2 max-w-[1oovw]"
         />
       )}
-      <LongformModal textEvent={event} />
+      <LongformModal textEvent={event} title={title} />
       <div className="flex gap-1">
         {tags.map((tag) => {
-          return <p className="bg-red-50 rounded outline outline-2">#{tag[1]}</p>;
+          return <p className="bg-orange-50 rounded-lg ">#{tag[1]}</p>;
         })}
       </div>
       <p className="break-words">Author - {event.pubkey}</p>

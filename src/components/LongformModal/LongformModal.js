@@ -6,7 +6,7 @@ import Translate from "../Translate/Translate";
 import translateIcon from "./translate.png";
 import "react-toastify/dist/ReactToastify.css";
 
-export default function LongformModal({ textEvent }) {
+export default function LongformModal({ textEvent, title}) {
   const [showModal, setShowModal] = React.useState(false);
   const notification = () =>
     toast(<Translate />, {
@@ -57,14 +57,14 @@ export default function LongformModal({ textEvent }) {
               <div className="border-0 rounded-lg shadow-lg flex flex-col  bg-white outline-none focus:outline-none w-[90%]">
                 {/*header*/}
                 <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
-                  <h3 className="text-3xl font-semibold">
-                    {textEvent.tags[0][1]}
+                  <h3 className="text-2xl font-semibold">
+                    {title}
                   </h3>
                   <button
-                    className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
+                    className="p-1 ml-auto bg-transparent border-0 text-grey z-80 opacity-1 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
                     onClick={() => setShowModal(false)}
                   >
-                    <span className="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
+                    <span className="bg-transparent text-black h-6 w-6 text-2xl block outline-none focus:outline-none">
                       ×
                     </span>
                   </button>
