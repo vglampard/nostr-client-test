@@ -37,7 +37,7 @@ export default function EventCard({ event }) {
         <img
           src={img[0][1]}
           alt={event.tags[0][1]}
-          className="max-h-[40%] rounded-md text-center m-2"
+          className="rounded-md text-center m-2"
         />
       )}
       <LongformModal textEvent={event} />
