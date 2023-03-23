@@ -13,7 +13,7 @@ export default function LongformContent() {
       kinds: [30023],
     },
   });
-
+const imageEvents = events.filter((event)=>event)
   // console.useNostrEvents filter log("LF EVENTS:", events)
   return (
     <div className="grid z-10 lg:grid-cols-3 gap-10 md:grid-cols-2 sm:cols-1 p-3 m-5">
