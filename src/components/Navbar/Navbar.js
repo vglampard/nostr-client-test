@@ -40,7 +40,7 @@ export default function Navbar() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <i className="fab fa-facebook-square text-lg leading-lg text-slate-700 opacity-75"></i><span className="ml-2">Test client pulling 30023 events (long form content) from relay.damus.io. </span>
+                  <i className="fab fa-facebook-square text-lg leading-lg text-slate-700 opacity-75"></i><span className="ml-2">Test client pulling 30023 events (long form content) with images from relay.damus.io. </span>
                 </a>
               </li>
               <li className="nav-item">

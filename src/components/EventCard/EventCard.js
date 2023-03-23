@@ -43,7 +43,7 @@ export default function EventCard({ post, modalStates }) {
               setSeeMore(!seeMore);
             }}
           >
-           +
+           <p>{seeMore ? "-" : "+"}</p>
           </button>
       </div>
       </div>
