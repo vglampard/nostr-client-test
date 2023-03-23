@@ -5,9 +5,17 @@ import { toast, ToastContainer } from "react-toastify";
 import Translate from "../Translate/Translate";
 import translateIcon from "./translate.png";
 import "react-toastify/dist/ReactToastify.css";
+import { getTitle } from "../../helpers/helpers";
 
-export default function LongformModal({ textEvent, title}) {
-  const [showModal, setShowModal] = React.useState(false);
+export default function LongformModal({modalStates}) {
+const event = modalStates.modalEvent
+console.log("event at modal:", event);
+
+const title = getTitle(event.tags);
+
+// console.log("MODALSTATES at MODAL:", modalStates);
+
+
   const notification = () =>
     toast(<Translate />, {
       position: "top-right",
@@ -21,23 +29,14 @@ export default function LongformModal({ textEvent, title}) {
     });
 
   function handleTranslationClick() {
-    let limitedText = textEvent.content.substring(0, 4999);
+    let limitedText = modalStates.modalEvent.content.substring(0, 4999);
     navigator.clipboard.writeText(limitedText);
     notification();
   }
 
   return (
     <>
-      <div className="grid justify-items-end">
-        <button
-          className="bg-orange-200 text-white active:bg-slate-600 font-bold uppercase text-sm  py-2 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 align-right w-10"
-          type="button"
-          onClick={() => setShowModal(true)}
-        >
-          +
-        </button>
-      </div>
-      {showModal ? (
+    
         <>
           <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
             <ToastContainer
@@ -62,7 +61,7 @@ export default function LongformModal({ textEvent, title}) {
                   </h3>
                   <button
                     className="p-1 ml-auto bg-transparent border-0 text-grey z-80 opacity-1 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
-                    onClick={() => setShowModal(false)}
+                    onClick={() => modalStates.setShowModal(false)}
                   >
                     <span className="bg-transparent text-black h-6 w-6 text-2xl block outline-none focus:outline-none">
                       ×
@@ -72,7 +71,7 @@ export default function LongformModal({ textEvent, title}) {
                 {/*body*/}
                 <div className=" top-0 z-80 p-6 flex-auto">
                   <p className="my-4 text-slate-500 text-sm leading-relaxed break-words w-[95%]">
-                    <ReactMarkdown>{textEvent.content}</ReactMarkdown>
+                    <ReactMarkdown>{event.content}</ReactMarkdown>
                   </p>
                 </div>
                 {/*footer*/}
@@ -81,30 +80,30 @@ export default function LongformModal({ textEvent, title}) {
                   <button
                     className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
-                    onClick={() => setShowModal(false)}
+                    onClick={() => modalStates.setShowModal(false)}
                   >
                     CLOSE
                   </button>
                   <img
                     src={translateIcon}
-                    onClick={(textEvent) => handleTranslationClick(textEvent)}
+                    onClick={(modalEvent) => handleTranslationClick(modalEvent)}
                     alt="translation button"
                     className="h-5"
                   />
-                  {/* <button
+                  <button
                     className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
-                    onClick={() => setShowModal(false)}
+                    onClick={() => modalStates.setShowModal(false)}
                   >
                     Save Changes
-                  </button> */}
+                  </button> 
                 </div>
               </div>
             </div>
           </div>
           <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
         </>
-      ) : null}
+  
     </>
   );
 }

@@ -4,7 +4,7 @@ export function getImage(event) {
   }
   export function getTitle(tags) {
     let title = tags.filter((tag) => tag[0] === "title");
-    return title;
+    return title[0][1];
   }
   
   export function dateFromUnix(unix) {
