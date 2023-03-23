@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import seeMore from "./more.png"
 import ReactMarkdown from "react-markdown";
 import userIcon from "./user.png";
 import {
