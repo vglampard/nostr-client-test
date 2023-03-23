@@ -2,8 +2,8 @@ export function getImage(event) {
     let img = event.filter((tag) => tag[0] === "image");
     return img;
   }
-  export function getTitle(event) {
-    let title = event.filter((tag) => tag[0] === "title");
+  export function getTitle(tags) {
+    let title = tags.filter((tag) => tag[0] === "title");
     return title;
   }
   
