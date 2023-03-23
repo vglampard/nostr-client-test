@@ -51,7 +51,7 @@ const title = getTitle(event.tags);
               pauseOnHover
               theme="light"
             />
-            <div className="absolute grid justify-items-center my-6 mx-auto h-[90%] z-80 align">
+            <div className="absolute grid justify-items-center pt-10 w-[98%] lg:w-[70%] my-6 mx-auto h-[90%] z-80 align ">
               {/*content*/}
               <div className="border-0 rounded-lg shadow-lg flex flex-col  bg-slate-50 outline-none focus:outline-none my-15 w-[90%] max-w-[80%]">
                 {/*header*/}
