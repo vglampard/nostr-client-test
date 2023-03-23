@@ -23,6 +23,9 @@ function App() {
           {/* <SpecificUserEvents/> */}
           {/* <GlobalFeed /> */}
           <LongformContent />
+
+          
+
         </div>
       </div>
     </NostrProvider>
