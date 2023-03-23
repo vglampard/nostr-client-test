@@ -12,12 +12,12 @@ export default function EventCard({ event }) {
   let tags = getTags(event.tags);
 
   return (
-    <div className="bg-slate-100 rounded-lg drop-shadow max-w-[80vw] p-3 text-xs flex flex-col">
+    <div className="bg-slate-100 rounded-lg drop-shadow-xl max-w-[80vw] p-3 text-xs flex flex-col">
       <h1 className="font-bold text-base">{title}</h1>
       <p>{date}</p>
-      <ReactMarkdown className="flex flex-wrap break-all text-xs p-2">
+      {/* <ReactMarkdown className="flex flex-wrap break-all text-xs p-2">
         {substring}
-      </ReactMarkdown>
+      </ReactMarkdown> */}
       {img.length !== 0 && (
         <img
           src={img[0][1]}
@@ -26,7 +26,7 @@ export default function EventCard({ event }) {
         />
       )}
       
-      <div className="flex gap-1">
+      <div className="flex gap-1 flex-wrap">
         {tags.map((tag) => {
           return <p className="bg-orange-50 rounded-lg ">#{tag[1]}</p>;
         })}
