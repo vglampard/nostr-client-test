@@ -4,7 +4,7 @@ export function getImage(event) {
   }
   export function getTitle(tags) {
     let title = tags.filter((tag) => tag[0] === "title");
-    return title;
+    return title[0][1];
   }
   
   export function dateFromUnix(unix) {
@@ -15,3 +15,6 @@ export function getImage(event) {
     return tags.filter((tag) => tag[0] === "t");
   }
   
+  export function checkImage(imageArr){
+    return imageArr.length>0 && imageArr[0][1].startsWith("http") & !imageArr[0][1].includes("bucketeer") ? true : false;
+  }
