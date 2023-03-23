@@ -31,7 +31,7 @@ export default function EventCard({ post, modalStates }) {
       <div className="flex justify-start flex-wrap leading-tight ml-1">
           {tags.map((tag) => {
             return (
-              <p className="bg-slate-50 bg-opacity-20 rounded-lg text-[0.65rem] mt-1 px-1 h-5">#{tag[1]}</p>
+              <p className="bg-slate-50 bg-opacity-20 rounded-lg text-[0.65rem] mt-1 px-1 h-4">#{tag[1]}</p>
             );
           })}
         </div>
@@ -51,7 +51,7 @@ export default function EventCard({ post, modalStates }) {
         <div className="bg-white bg-opacity-40 rounded-lg">
           <div className=" flex break-words w-[100%] items-center p-2">
             <img src={userIcon} alt="user icon" className="w-4 h-4" />
-            <p className="break-words w-[100%]">{post.pubkey}</p>
+            <p className="break-words w-[100%] text-[0.65rem] px-1">{post.pubkey}</p>
             </div>
             <div className="grid justify-items-end">
               <ReactMarkdown className="flex flex-wrap break-all text-xs px-2 ">
