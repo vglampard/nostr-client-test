@@ -19,7 +19,7 @@ function App() {
         <header className="sticky top-0 z-50">
           <Navbar className="" />
         </header>
-        <div className="pt-[100px] lg:px-[200px] bg-[url('./bg.jpg')]">
+        <div className="pt-[100px] lg:px-[200px] bg-[url('./bg.jpg')] bg-fixed bg-cover">
           {/* <SpecificUserEvents/> */}
           {/* <GlobalFeed /> */}
           <LongformContent />

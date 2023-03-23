@@ -28,7 +28,7 @@ export default function EventCard({ event }) {
   let tags = getTags(event.tags);
 
   return (
-    <div className="bg-slate-100 rounded-s drop-shadow max-w-[95vw] p-3 text-xs flex flex-col">
+    <div className="bg-slate-100 rounded-lg drop-shadow max-w-[80vw] p-3 text-xs flex flex-col">
       <h1 className="font-bold text-base">{title}</h1>
       <p>{date}</p>
       <ReactMarkdown className="flex flex-wrap break-all text-xs p-2">
