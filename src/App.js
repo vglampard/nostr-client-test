@@ -20,14 +20,14 @@ function App() {
   const MODAL_STATES = { setShowModal, showModal, modalEvent, setModalEvent };
 
   console.log("MODAL STATES AT APP TO BEGIN:", MODAL_STATES);
-
+//  bg-[url('./bg.jpg')]
   return (
     <NostrProvider relayUrls={relayUrls} debug={true}>
       <div className="bg-zinc-200">
         <header className="sticky top-0 z-50">
           <Navbar className="" />
         </header>
-        <div className="pt-[100px] lg:px-[200px] bg-[url('./bg.jpg')] bg-fixed bg-cover">
+        <div className="pt-[100px] lg:px-[200px] bg-slate-300 bg-fixed bg-cover">
           {/* <SpecificUserEvents/> */}
           {/* <GlobalFeed /> */}
           {showModal && <LongformModal modalStates={MODAL_STATES} />}

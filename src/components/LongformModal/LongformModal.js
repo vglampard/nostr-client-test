@@ -53,10 +53,10 @@ const title = getTitle(event.tags);
             />
             <div className="absolute grid justify-items-center my-6 mx-auto h-[90%] z-80 align">
               {/*content*/}
-              <div className="border-0 rounded-lg shadow-lg flex flex-col  bg-white outline-none focus:outline-none w-[90%]">
+              <div className="border-0 rounded-lg shadow-lg flex flex-col  bg-slate-50 outline-none focus:outline-none my-15 w-[90%] max-w-[80%]">
                 {/*header*/}
-                <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
-                  <h3 className="text-2xl font-semibold">
+                <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 bg-slate-100 sticky top-0 z-50 rounded-t">
+                  <h3 className="text-xl font-semibold">
                     {title}
                   </h3>
                   <button
@@ -78,7 +78,7 @@ const title = getTitle(event.tags);
 
                 <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
                   <button
-                    className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    className="text-slate-500 background-transparent font-bold uppercase px-6 py-2 text-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
                     onClick={() => modalStates.setShowModal(false)}
                   >
@@ -90,13 +90,7 @@ const title = getTitle(event.tags);
                     alt="translation button"
                     className="h-5"
                   />
-                  <button
-                    className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                    type="button"
-                    onClick={() => modalStates.setShowModal(false)}
-                  >
-                    Save Changes
-                  </button> 
+                  
                 </div>
               </div>
             </div>

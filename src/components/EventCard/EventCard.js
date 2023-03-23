@@ -20,15 +20,15 @@ export default function EventCard({ post, modalStates }) {
   let tags = getTags(post.tags);
 
   return (
-    <div className="bg-slate-100 bg-opacity-50 rounded-lg drop-shadow-xl text-xs flex flex-col h-auto w-full aspect-video mb-6">
-      <h1 className="font-bold text-base pt-1">{title}</h1>
-      <p>{date}</p>
+    <div className="bg-slate-100 bg-opacity-50 rounded break-inside-avoid drop-shadow-xl text-xs flex flex-col h-auto w-full aspect-video mb-6  ">
+      <h1 className="font-bold pt-1 leading-1">{title}</h1>
+      <p className="text-xs">{date}</p>
    
       {img.length !== 0 && (
         <img
           src={img[0][1]}
           alt={post.tags[0][1]}
-          className="rounded text-center m-2 max-w-[1oovw]"
+          className="w-[1oo%]"
         />
       )}
 
@@ -37,12 +37,12 @@ export default function EventCard({ post, modalStates }) {
           return <p className="bg-orange-50 rounded-lg ">#{tag[1]}</p>;
         })}
       </div>
-      <button  className="bg-orange-200 text-white active:bg-slate-600 font-bold uppercase text-sm  py-2 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-2 mb-2 ease-linear transition-all duration-150 align-right w-9"
+      <button  className="bg-slate-200 bg-opacity-30 text-white active:bg-slate-600 font-bold uppercase text-sm  py-2 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-2 mb-2 ease-linear transition-all duration-150 align-right w-9"
               onClick={() => {
                 modalStates.setModalEvent(post); setSeeMore(!seeMore);
               }}
             >
-              +
+              . . .
             </button>
 {seeMore && <div className="bg-white bg-opacity-40 rounded-lg">
         <div className=" break-words w-[100%] items-center p-2">

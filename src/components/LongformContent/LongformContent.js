@@ -16,7 +16,7 @@ export default function LongformContent({modalStates}) {
 const imageEvents = events.filter((event)=>checkImage(getImage(event.tags)));
   
   return (
-    <div class="gap-8 columns-3">
+    <div class="gap-3 columns-1 md:columns-3 lg:columns-4%">
 
 {imageEvents.map((post) => (
         <EventCard post={post} modalStates={modalStates} />
