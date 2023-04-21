@@ -28,7 +28,7 @@ export default function EventCard({ event }) {
       
       <div className="flex gap-1">
         {tags.map((tag) => {
-          return <p className="bg-orange-50 rounded-lg ">#{tag[1]}</p>;
+          return <p className="bg-orange-50 rounded-lg ">#{tag[1] && tag[1]}</p>;
         })}
       </div>
       <div className="flex break-words w-[100%] items-center p-2">
