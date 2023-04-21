@@ -6,6 +6,8 @@ import Navbar from "./components/Navbar/Navbar";
 import LongformContent from "./components/LongformContent/LongformContent";
 import LongformModal from "./components/LongformModal/LongformModal";
 // import SpecificUserEvents from './components/SpecificUserEvents/SpecificUserEvents';
+import SingleUser from "./components/SingleUser/SingleUser";
+import PostMessage from "./components/PostMessage/PostMessage";
 
 // Relays to tap into - 
 const relayUrls = [
@@ -28,11 +30,14 @@ function App() {
           <Navbar className="" />
          
         </header>
-        <div className="pt-[100px] lg:px-[200px] bg-[url('./bg.jpg')] bg-fixed bg-cover">
+        <div className="pt-[100px] lg:px-[200px]" >
+        {/* bg-[url('./bg.jpg')] bg-fixed bg-cover" */}
           {/* <SpecificUserEvents/> */}
           {/* <GlobalFeed /> */}
-          {showModal && <LongformModal modalStates={MODAL_STATES} />}
-          <LongformContent modalStates={MODAL_STATES} />
+          {/* {showModal && <LongformModal modalStates={MODAL_STATES} />}
+          <LongformContent modalStates={MODAL_STATES} /> */}
+        <SingleUser/>
+        <PostMessage/>
         </div>
       {/* </div> */}
     </NostrProvider>

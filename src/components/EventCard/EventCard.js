@@ -26,12 +26,25 @@ export default function EventCard({ post, modalStates }) {
       {img.length !== 0 && (
         <img src={img[0][1]} alt={post.tags[0][1]} className="w-[1oo%]" />
       )}
-      
-      <div className="flex gap-1">
-        {tags.map((tag) => {
-          return <p className="bg-orange-50 rounded-lg ">#{tag[1] && tag[1]}</p>;
-        })}
+       <div className="flex justify-start flex-wrap leading-tight ml-1">
+          {tags.map((tag) => {
+            return (
+              <p className="bg-slate-50 bg-opacity-20 rounded-lg text-[0.65rem] mt-1 px-1 h-4">#{tag[1]}</p>
+            );
+          })}
+        </div>
+        <div className="">
+          <button
+            className="bg-slate-200 bg-opacity-30 text-white active:bg-slate-600 font-bold uppercase text-sm rounded-full shadow hover:shadow-lg outline-none focus:outline-none ease-linear transition-all duration-150 align-right w-5 pb-1 px-3 flex content-center justify-center m-2"
+            onClick={() => {
+              modalStates.setModalEvent(post);
+              setSeeMore(!seeMore);
+            }}
+          >
+           <p>{seeMore ? "-" : "+"}</p>
+          </button>
       </div>
+      
       
        {seeMore && (
         <div className="bg-white bg-opacity-40 rounded-lg">
@@ -39,6 +52,7 @@ export default function EventCard({ post, modalStates }) {
             <img src={userIcon} alt="user icon" className="w-4 h-4" />
             <p className="break-words w-[100%] text-[0.65rem] px-1">{post.pubkey}</p>
             </div>
+            
             <div className="grid justify-items-end">
               <ReactMarkdown className="flex flex-wrap break-all text-xs px-2 ">
                 {substring}

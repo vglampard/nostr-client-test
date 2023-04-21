@@ -1,23 +1,36 @@
 import React from "react";
 import { useNostrEvents } from "nostr-react";
+import { dateFromUnix } from "../../helpers/helpers";
 // import EventCard from '../EventCard/EventCard';
 
-export default function SpecificUserEvents() {
+export default function SpecificUserEvents({pubkey, username}) {
 
     const { events } = useNostrEvents({
         filter: {
           authors: [
-            "npub1sg6plzptd64u62a878hep2kev88swjh3tw00gjsfl8f237lmu63q0uf63m",
+            pubkey,
           ],
-          since: 0,
+          since: 3000,
           kinds: [1],
         },
       });
-    
-      return (
+
+    console.log("EVENTSs:", events);
+    // filter out all evnts that have an e tag
+    const posts = events.filter((event)=>{
+      let tags = event.tags.filter((tag)=>tag.includes("e"));
+      return tags.length===0
+    })
+    console.log("POSTS:", posts)
+
+    return (
         <>
-          {events.map((event) => (
-            <p key={event.id}>{event.pubkey} posted: {event.content}</p>
+        {username} Events:
+          {posts.map((event) => (
+            <div className=" flex flex-col ">
+            <p key={event.id} className="text-lg"> {event.content}</p>
+            <p className="text-right"> at {dateFromUnix(event.created_at)}</p>
+            </div>
           ))}
         </>
       );
